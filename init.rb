@@ -1,4 +1,14 @@
 
+Redmine::Plugin.register :wiki_backlinks do
+  name 'Backlinks plugin'
+  author 'Josef Cech'
+  description "
+    Plugin providing backlinks macro for wiki pages.
+    <a href='https://github.com/yrwein/redmine_backlinks'>Plugin page.</a>
+  ".html_safe
+  version '0.0.1'
+end
+
 Redmine::WikiFormatting::Macros.register do
   desc "Shows backlinks to the/a wiki page. Example:\n\n  !{{backlinks}}"
   macro :backlinks do |obj, args|
