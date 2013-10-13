@@ -1,0 +1,11 @@
+= Wiki Backlinks plugin for Redmine
+
+Plugin providing backlinks macro for Redmine wiki pages.
+
+Usage: {{backlinks}}
+
+Tested on Redmine 2.3
+
+== Installation
+
+git clone git://github.com/Yrwein/redmine_backlinks.git plugins/wiki_backlinks
