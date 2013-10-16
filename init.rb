@@ -5,10 +5,11 @@ Redmine::Plugin.register :wiki_backlinks do
   name 'Backlinks plugin'
   author 'Josef Cech'
   description "
-    Plugin providing backlinks macro for wiki pages.
+    Plugin providing backlinks for wiki pages.
     <a href='https://github.com/yrwein/redmine_backlinks'>Plugin page.</a>
   ".html_safe
   version '0.0.1'
+  settings :default => {'show_always' => true}, :partial => 'settings/backlinks_settings'
 end
 
 Redmine::WikiFormatting::Macros.register do

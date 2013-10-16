@@ -1,0 +1,10 @@
+<div class="wiki wiki-page">
+  <%= textilizable content, :text, :attachments => content.page.attachments,
+        :edit_section_links => (@sections_editable && {:controller => 'wiki', :action => 'edit', :project_id => @page.project, :id => @page.title}) %>
+</div>
+
+<hr>
+
+<% if Setting.plugin_wiki_backlinks['show_always'] -%>
+  <%= render :partial => 'wiki/backlinks', :locals => {:page => @page} %>
+<% end -%>
