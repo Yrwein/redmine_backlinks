@@ -1,9 +1,9 @@
 
 <% backlinks = RedmineBacklinks.get page %>
 <% if backlinks.empty? -%>
-  No backlinks
+  <%= l('backlinks_not_found') %>
 <% elsif -%>
-  Backlinks: <ul>
+  <%= l('backlinks_header') %>: <ul>
     <% backlinks.each do |backlink_page| -%>
       <% title = backlink_page.pretty_title %>
       <% title = backlink_page.project.name + ": " + title if backlink_page.project != @project %>
