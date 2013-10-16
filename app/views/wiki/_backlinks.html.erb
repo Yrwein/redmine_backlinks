@@ -1,7 +1,7 @@
 
 <% backlinks = RedmineBacklinks.get page %>
 <% if backlinks.empty? -%>
-  <%= l('backlinks_not_found') %>
+  <%= l('backlinks_not_found') if show_not_found_message %>
 <% elsif -%>
   <%= l('backlinks_header') %>: <ul>
     <% backlinks.each do |backlink_page| -%>

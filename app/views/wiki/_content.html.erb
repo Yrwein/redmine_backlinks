@@ -6,5 +6,5 @@
 <hr>
 
 <% if Setting.plugin_wiki_backlinks['show_always'] -%>
-  <%= render :partial => 'wiki/backlinks', :locals => {:page => @page} %>
+  <%= render :partial => 'wiki/backlinks', :locals => {:page => @page, :show_not_found_message => false} %>
 <% end -%>

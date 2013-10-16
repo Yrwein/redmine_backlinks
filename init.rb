@@ -22,6 +22,6 @@ Redmine::WikiFormatting::Macros.register do
     end
     raise 'Page not found' if page.nil? || !User.current.allowed_to?(:view_wiki_pages, page.wiki.project)
 
-    render :partial => 'wiki/backlinks', :locals => {:page => page}
+    render :partial => 'wiki/backlinks', :locals => {:page => page, :show_not_found_message => true}
   end
 end
