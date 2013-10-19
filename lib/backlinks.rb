@@ -9,7 +9,7 @@ module RedmineBacklinks
 	    )
 	    results_current_project, = WikiPage.search(
 	      ["[[" + page.title + "]]", "[[" + page.title + "|"],
-	      @project,
+	      page.project,
 	      :titles_only => false
 	    )
 	    results = results_all_projects + results_current_project
