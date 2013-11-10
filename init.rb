@@ -1,5 +1,7 @@
 
-require_dependency 'backlinks'
+ActionDispatch::Callbacks.to_prepare do
+  require_dependency 'backlinks'
+end
 
 Redmine::Plugin.register :wiki_backlinks do
   name 'Backlinks plugin'
