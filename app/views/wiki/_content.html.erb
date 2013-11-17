@@ -3,8 +3,8 @@
         :edit_section_links => (@sections_editable && {:controller => 'wiki', :action => 'edit', :project_id => @page.project, :id => @page.title}) %>
 </div>
 
-<hr>
-
 <% if Setting.plugin_wiki_backlinks['show_always'] -%>
   <%= render :partial => 'wiki/backlinks', :locals => {:page => @page, :show_not_found_message => false} %>
 <% end -%>
+
+<hr>

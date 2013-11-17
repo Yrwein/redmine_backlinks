@@ -3,7 +3,8 @@
 <% if backlinks.empty? -%>
   <%= l('backlinks_not_found') if show_not_found_message %>
 <% elsif -%>
-  <%= l('backlinks_header') %>: <ul>
+  <hr>
+  <b><%= l('backlinks_header') %></b>: <ul>
     <% backlinks.each do |backlink_page| -%>
       <% title = backlink_page.pretty_title %>
       <% title = backlink_page.project.name + ": " + title if backlink_page.project != @project %>
