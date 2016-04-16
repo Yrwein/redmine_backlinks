@@ -2,7 +2,7 @@
 
 Plugin providing backlinks for Redmine wiki pages. It shows backlinks to opened wiki page unless turned off in settings. (And you can use {{backlinks}} macro in wiki pages too.)
 
-Tested on Redmine 2.3.
+Tested on Redmine 3.2.
 
 == Installation
 
